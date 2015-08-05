@@ -1,0 +1,324 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="false"
+        android:text="none"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" >
+
+        <Button
+            android:id="@+id/btnConn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:text="Connect BlueNinja" />
+
+        <Button
+            android:id="@+id/btnDisConn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:text="Disconnect BlueNinja" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/textView1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" >
+
+        <Button
+            android:id="@+id/btnEnable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:text="Enable Notifications" />
+
+        <Button
+            android:id="@+id/btnDisable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.20"
+            android:text="Disable Notifications" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Accel"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textAccelX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/textView3"
+            android:layout_marginTop="5dp"
+            android:minWidth="110dp"
+            android:text="X:---.-G"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ProgressBar
+            android:id="@+id/progressAccelX"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/textAccelX"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@id/textAccelX"
+            android:max="320"
+            android:progress="160" />
+
+        <TextView
+            android:id="@+id/textAccelY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textAccelX"
+            android:layout_marginTop="5dp"
+            android:minWidth="110dp"
+            android:text="Y:---.-G"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ProgressBar
+            android:id="@+id/progressAccelY"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/textAccelY"
+            android:layout_below="@id/textAccelX"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@id/textAccelY"
+            android:max="320"
+            android:progress="160" />
+
+        <TextView
+            android:id="@+id/textAccelZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textAccelY"
+            android:layout_marginTop="5dp"
+            android:minWidth="110dp"
+            android:text="Z:---.-G"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ProgressBar
+            android:id="@+id/progressAccelZ"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textAccelZ"
+            android:layout_below="@id/progressAccelY"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@id/textAccelZ"
+            android:max="320"
+            android:progress="160" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textAccelZ"
+            android:layout_marginTop="5dp"
+            android:text="Gyro"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textGyroX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView4"
+            android:layout_marginTop="5dp"
+            android:minWidth="110dp"
+            android:text="X:-----.-dig/s"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ProgressBar
+            android:id="@+id/progressGyroX"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textGyroX"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@+id/textGyroX"
+            android:max="4000"
+            android:progress="2000" />
+
+        <TextView
+            android:id="@+id/textGyroY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textGyroX"
+            android:layout_marginTop="5dp"
+            android:minWidth="110dp"
+            android:text="Y:-----.-dig/s"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ProgressBar
+            android:id="@+id/progressGyroY"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textGyroY"
+            android:layout_below="@id/textGyroX"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@id/textGyroY"
+            android:max="4000"
+            android:progress="2000" />
+
+        <TextView
+            android:id="@+id/textGyroZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textGyroY"
+            android:layout_marginTop="5dp"
+            android:minWidth="110dp"
+            android:text="Z:-----.-dig/s"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ProgressBar
+            android:id="@+id/progressGyroZ"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textGyroZ"
+            android:layout_below="@id/textGyroY"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@+id/textGyroZ"
+            android:max="4000"
+            android:progress="2000" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textGyroZ"
+            android:layout_marginTop="5dp"
+            android:text="Magnetometer"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textMagnetoX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="5dp"
+            android:minWidth="110dp"
+            android:text="X:-----.-uH"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ProgressBar
+            android:id="@+id/progressMagnetoX"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textMagnetoX"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@+id/textMagnetoX"
+            android:max="8000"
+            android:progress="4000" />
+
+        <TextView
+            android:id="@+id/textMagnetoY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textMagnetoX"
+            android:layout_marginTop="5dp"
+            android:minWidth="110dp"
+            android:text="Y:-----.-uH"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ProgressBar
+            android:id="@+id/progressMagnetoY"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textMagnetoY"
+            android:layout_below="@id/textMagnetoX"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@+id/textMagnetoY"
+            android:max="8000"
+            android:progress="4000" />
+
+        <TextView
+            android:id="@+id/textMagnetoZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textMagnetoY"
+            android:layout_marginTop="5dp"
+            android:minWidth="110dp"
+            android:text="Z:-----.-uH"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ProgressBar
+            android:id="@+id/progressMagnetoZ"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textMagnetoZ"
+            android:layout_below="@id/textMagnetoY"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@+id/textMagnetoZ"
+            android:max="8000"
+            android:progress="4000" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textMagnetoZ"
+            android:layout_marginTop="5dp"
+            android:text="Airpressure"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textAirpressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView5"
+            android:layout_marginTop="5dp"
+            android:text="-----.-Pa"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
